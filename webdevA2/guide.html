@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CHESS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="navbar" id="myNav">
+        <a href="index.html"><b>CHESS-S</b></a>
+        <a href="#" class="active">Guides</a>
+        <a href="phases.html">Phases</a>
+        <!-- &#9776 is the html entity for the hamburger icon-->
+        <a href="#" class="icon">&#9776;</a>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" id="cbtn">&times;</a>
+        <a href="#chess">Chess</a>
+        <a href="#pawns">Pawns</a>
+        <a href="#knights">Knights</a>
+        <a href="#bishops">Bishops</a>
+        <a href="#rooks">Rooks</a>
+        <a href="#queens">Queens</a>
+        <a href="#kings">Kings</a>
+
+    </div>
+    <button class="openbtn" id="obtn">&#10095;</button>
+
+    <button id="myBtn" title="Go to top">&#129153;</button>
+
+    <div class="content">
+        <br><br><br>
+        <div class="navigation">
+            <hr><br>
+            <h1><b>How to play Chess</b></h1>
+            <br>
+            <hr><br>
+        </div>
+        <br>
+        <div class="intro2chess">
+            <h1 id="chess">Chess</h1>
+            <br>
+            <p>Chess is a turn based strategy board game played between 2 players on an 8x8 chequered board. Each player
+                picks a side either black or white and the main objective is to trap your opponents king which is called
+                a Checkmate, the player can either win through a checkmate, draw or by resigning.</p>
+            <br>
+        </div>
+        <h1 id="pieceintro">The Pieces</h1>
+        <div class="pieces">
+            <div id="pawn">
+                <h3>Pawn</h3>
+                <div class="WhiteSymbol"><img src="img/wP.png" alt="white pawn"></div>
+                <div class="BlackSymbol"><img src="img/bP.png" alt="black pawn"></div>
+            </div>
+
+            <div id="Knight">
+                <h3>Knight</h3>
+                <div class="WhiteSymbol"><img src="img/wN.png" alt="white knight"></div>
+                <div class="BlackSymbol"><img src="img/bN.png" alt="black knight"></div>
+            </div>
+
+            <div id="Bishop">
+                <h3>Bishop</h3>
+                <div class="WhiteSymbol"><img src="img/wB.png" alt="white bishop"></div>
+                <div class="BlackSymbol"><img src="img/bB.png" alt="black bishop"></div>
+            </div>
+
+            <div id="Rook">
+                <h3>Rook</h3>
+                <div class="WhiteSymbol"><img src="img/wR.png" alt="white rook"></div>
+                <div class="BlackSymbol"><img src="img/bR.png" alt="black rook"></div>
+            </div>
+
+            <div id="Queen">
+                <h3>Queen</h3>
+                <div class="WhiteSymbol"><img src="img/wQ.png" alt="white queen"></div>
+                <div class="BlackSymbol"><img src="img/bQ.png" alt="black queen"></div>
+            </div>
+
+            <div id="King">
+                <h3>King</h3>
+                <div class="WhiteSymbol"><img src="img/wK.png" alt="white king"></div>
+                <div class="BlackSymbol"><img src="img/bK.png" alt="black king"></div>
+            </div>
+        </div>
+        <div>
+            <p>The player with the white pieces goes first and every subsequent turn the players will take turns to play
+                a move. Each turn, the player has to move 1 piece to a new square. There are 6 unique pieces in Chess
+                and each piece has their own unique moveset and properties which we will go into detail later. To
+                capture an opponent piece, simply move your piece onto the square occupied by your opponent and remove
+                it from the board granted it is a legal move.</p>
+            <br>
+        </div>
+
+        <div class="theboard">
+            <h1>The board</h1>
+            <br>
+            <p>The board must always be placed so that each player has a light coloured square in their bottom right
+                hand corner. Placeing the board the wrong way round is a very common mistake. Once it is the right way
+                round, we can start adding the pieces. Each player's pieces start on the first rank on that player's
+                side of the board.(horizontal rows are called ranks)</p>
+            <br>
+            <p>Ranks are labelled below as letters, the top being A all the way down to H, and coloumns have their
+                numbers 1 to 8. This way each square on their board has their own id making it easier to represent moves
+                in text.</p>
+            <br>
+        </div>
+    
+
+        <div class="chessboard label"></div>
+
+        <div class="moveRecord">
+            <br>
+            <h1>Recording a move</h1>
+            <br>
+            <p>Each pieve is represented by the capitalised first letter of its name except for the Knight as it starts 
+                with the same letter as the king so it uses the letter <b>N</b> instead. When recording a move, we take 
+                the pieve that is being moved and the square that it is moving to.</p>
+            <p>Example:</p>
+            <br>
+            <ul>
+                <li><b>Kf1</b> - King moves to f1 square</li>
+                <li><b>Nf3</b> - Knight moves to f3 square</li>
+                <li><b>Pe4</b> - Pawn moves to e4</li>
+            </ul>
+            <br>
+            <p>When a piece captures another piece it is repsented as an <b>'x'</b> symbol between the piece and the square. 
+                So it would be <b>Nxf3</b>.</p>
+            <br>
+            <p>When a pawn reaches the end of the board an promotes it is represented as an <b>'='</b> symbol between the 
+                piece and the square.</p>
+            <br>
+            <p>For check and checkmate a <b>'+'</b> and <b>'#'</b> are used respectively after the square so <b>Ba3+</b> or 
+                <b>Qxh7#</b>.</p>
+            <br>
+            <h1>Setting up the pieces</h1>
+            <br>
+        </div>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides">
+            <div class="chessboard c1"></div>
+            <div class="text">Rooks go in each corner</div>
+            </div>
+        
+            <div class="mySlides">
+            <div class="chessboard c2"></div>
+            <div class="text">Followed by the Knights</div>
+            </div>
+        
+            <div class="mySlides">
+            <div class="chessboard c3"></div>
+            <div class="text">Bishops are added after</div>
+            </div>
+
+            <div class="mySlides">
+                <div class="chessboard c4"></div>
+                <div class="text">The Queen is placed on the square of her colour</div>
+            </div>
+
+            <div class="mySlides">
+                <div class="chessboard c5"></div>
+                <div class="text">Finish with the pawns on the second rank</div>
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <!--PAWNS-->
+        <br><br><hr><br>
+        <h1 id="pawns">Piece introduction: Pawns</h1>
+        <br><hr><br>
+        <br>
+        <p>The pawn is seemingly the weakest of the bunch. However, its role in Chess is not to be
+            underestimated. Each player starts the game with eight pawns on the second rank.</p>
+        <br>
+        <div class="chessboard p1"></div>
+        <br>
+        <h2>Pawns: Movement</h2>
+        <br>
+        <p>Except on its first move, the pawn is only allowed to move one square forwards, and never 
+            backwards. On its very first move, a pawn has the choice of moving one or two squares, 
+            although both squares must be unoccupied to do this. On all subsequent moves, the pawn 
+            can move one square only, even if it only moved one square on its first turn - it only 
+            has one chance to move two.</p>
+        <br>
+        <div class="chessboard p2"></div>
+        <br>
+        <h2>Pawns: Capturing</h2>
+        <br>
+        <p>If the square directly in front of a pawn is occupied, the pawn is blocked and cannot move 
+            forwards. Unlike all the other pieces, a pawn does not capture the same way it moves. Instead, 
+            a pawn captures by moving one square diagonally forward. In the diagram below, the white pawn 
+            cannot capture the black pawn directly in front of it, but it may capture the black knight by 
+            moving one square diagonally forward. Try it for yourself - drag the white pawn onto the black 
+            knight to capture it!</p>
+        <br>
+        <div class="chessboard p3"></div>
+        <br>
+        <h2>Pawns: Promotion</h2>
+        <br>
+        <p>The most important feature of pawns is their ability to promote when they reach the opposite side 
+            of the board. If your pawn gets all the way to the opponent's back rank, it is immediately promoted 
+            to a more powerful piece - take the pawn off the board, and replace it with a new piece of your choice. 
+            The only restriction is that you cannot promote to a king or another pawn. Usually, a pawn is promoted 
+            to a queen, as the queen is the most powerful piece, but sometimes there is a good reason to promote to 
+            a different piece such as a knight. It doesn't matter if you have all your pieces still on the board, 
+            you can still promote to whatever piece you want, even if this means you have two or three queens on 
+            the board at once.</p>
+        <br>
+        <p>On the board below, move the white pawn to the end of the board</p>
+        <br>
+        <div class="chessboard p4"></div>
+
+        <!--KNIGHTS-->
+        <br><br><hr><br>
+        <h1 id="knights">Piece introduction: Knights</h1>
+        <br><hr><br>
+        <br>
+        <p>The pawn is seemingly the weakest of the bunch. However, its role in Chess is not to be
+            underestimated. Each player starts the game with eight pawns on the second rank.</p>
+        <br>
+        <div class="chessboard n1"></div>
+        <br>
+        <h2>Knights: Movement</h2>
+        <br>
+        <p>The knight moves in an L-shape, either two squares vertically and one square horizontally, 
+            or two squares horizontally and one square vertically. This means the knight has, at most, 
+            eight possible squares it can jump to, as illustrated on the board below:</p>
+        <br>
+        <div class="chessboard n2"></div>
+        <br>
+        <p>It doesn't matter if any of the intervening squares are occupied, the knight jumps over 
+            everything in its path to land at its chosen destination. On the board below, take the 
+            black knight and make a legal move:</p>
+        <br>
+        <div class="chessboard n3"></div>
+        <br>
+        <h2>Knights: Capturing</h2>
+        <br>
+        <p>Unlike the pawn, the knight captures the same way as it moves. On the board below, use the white 
+            knight to make a capture, but make sure you capture the right piece!</p>
+        <br>
+        <div class="chessboard n4"></div>
+
+        <!--BISHOPS-->
+        <br><br><hr><br>
+        <h1 id="bishops">Piece introduction: Bishops</h1>
+        <br><hr><br>
+        <br>
+        <p>The Bishop is a long range piece that can be very powerful, but it has a significant weakness - 
+            it can only ever move on squares of one colour. Each player starts the game with two bishops - 
+            one that moves on light squares, and one that moves on dark squares - so between them, the two 
+            bishops can cover all the squares on the board.</p>
+        <br>
+        <div class="chessboard b1"></div>
+        <br>
+        <h2>Bishops: Movement</h2>
+        <br>
+        <p>The bishop can move any number of squares in a straight diagonal line, so long as the squares 
+            between the bishop and its destination are unoccupied. The diagram below shows the legal moves 
+            for a bishop.</p>
+        <br>
+        <div class="chessboard b2"></div>
+        <br>
+        <p>Unlike the knight, the bishop cannot jump over obstacles, so if something is blocking its path, 
+            the bishop can go no further. On the board below, drag the white bishop to make a legal move:</p>
+        <br>
+        <div class="chessboard b3"></div>
+        <br>
+        <h2>Bishops: Capturing</h2>
+        <br>
+        <p>The bishop captures the same way it moves. On the diagram below, make a capture with the black bishop:</p>
+        <br>
+        <div class="chessboard b4"></div>
+
+         <!--ROOKS-->
+         <br><br><hr><br>
+         <h1 id="rooks">Piece introduction: Rooks</h1>
+         <br><hr><br>
+         <br>
+         <p>The rooks, which are also sometimes known as 'castles', are the second most powerful piece after the queen. 
+             Like the bishop they are long range pieces, but they do not share the bishop's weakness and can reach every 
+             square on the board. Because they start in the corners, rooks often don't join in the battle until after the 
+             knights and bishops, but that also means they often survive much deeper into the game. In fact, the most 
+             commonly occurring endgames in chess are endgames involving rooks! Each player starts the game with two rooks.</p>
+         <br>
+         <div class="chessboard r1"></div>
+         <br>
+         <h2>Rooks: Movement</h2>
+         <br>
+         <p>The rook can move any number of squares in a straight line horizontally or vertically, so long as 
+             none of the squares it passes through are occupied. The board below shows the legal moves for a rook:</p>
+         <br>
+         <div class="chessboard r2"></div>
+         <br>
+         <p>Like the bishop, the rook can be blocked if other pieces get in its way. On the board below, make a legal 
+             move with the white rook:</p>
+         <br>
+         <div class="chessboard r3"></div>
+         <br>
+         <h2>Rooks: Capturing</h2>
+         <br>
+         <p>Rooks capture the same way they move. On the board below, drag the white rook to make a capture:</p>
+         <br>
+         <div class="chessboard r4"></div>
+
+         <!--QUEENS-->
+         <br><br><hr><br>
+         <h1 id="queens">Piece introduction: Queens</h1>
+         <br><hr><br>
+         <br>
+         <p>The mighty queen is the most powerful piece on the chessboard, combining the powers of the rook and bishop. 
+             Such is the queen's power, that the player who loses his or her queen is almost sure to lose the game as well. 
+             No other piece rivals the speed and manoeuverability of the queen, and many games are often decided by a lightning 
+             queen sortie. Each player starts the game with one queen.</p>
+         <br>
+         <div class="chessboard q1"></div>
+         <br>
+         <h2>Queens: Movement</h2>
+         <br>
+         <p>The queen can move any number of squares in a straight line horizontally, vertically, or diagonally. In this way, 
+             she combines the powers of the rook and bishop in a single piece. The legal moves of the queen are displayed on 
+             the board below:</p>
+         <br>
+         <div class="chessboard q2"></div>
+         <br>
+         <p>It might seem that the queen can do almost anything that another piece can, but there are limits to the queen's prowess. 
+             Like the rook and bishop, she lacks the knight's ability to jump over obstacles, and so her routes must always be clear 
+             of obstruction. Try making a legal move with the white queen on the board below:</p>
+         <br>
+         <div class="chessboard q3"></div>
+         <br>
+         <h2>Queens: Capturing</h2>
+         <br>
+         <p>The queen captures the same way she moves. Drag the black queen to make a capture on the board below:</p>
+         <br>
+         <div class="chessboard q4"></div>
+
+         <!--KINGS-->
+         <br><br><hr><br>
+         <h1 id="kings">Piece introduction: Kings</h1>
+         <br><hr><br>
+         <br>
+         <p>The king is the most important piece in the game. You must keep your king safe at all costs, because if your 
+             opponent traps your king, it's checkmate and you lose the game. Don't worry though, the king is not completely 
+             helpless and he has an army of loyal pieces and pawns to protect him! Each player starts the game with one king, 
+             and unlike the other pieces and pawns, the king is never captured and stays on the board for the whole game.</p>
+         <br>
+         <div class="chessboard k1"></div>
+         <br>
+         <h2>Kings: Movement</h2>
+         <br>
+         <p>The king's movement is limited to one square in any direction, so he's not the fastest piece in the box. Still, 
+            he is more powerful than a pawn, and he can give bishops and knights a run for their money too! The king's legal 
+            moves are displayed on the board below:</p>
+         <br>
+         <div class="chessboard k2"></div>
+         <br>
+         <p>As usual, here is your chance to try it yourself - grab the white king and make a move on the board below:</p>
+         <br>
+         <div class="chessboard k3"></div>
+         <br>
+         <h2>Kings: Capturing</h2>
+         <br>
+         <p>Despite his limited mobility, the king can still capture an enemy piece if he can catch up with them! Make a 
+             capture with the white king on the board below:</p>
+         <br>
+         <div class="chessboard k4"></div>
+         <br>
+         <p>Because the king is so important, you must never move him onto a square where he could be captured. This is 
+             called moving into <b>check</b>, and is against the rules. If an enemy piece could move onto a square next turn, 
+             then that square is off limits to the king. On the board below, the squares marked with an <b>X</b> are threatened 
+             by black's bishop, so the white king may not move there:</p>
+         <br>
+         <div class="chessboard k5"></div>
+         <br>
+         <p>Now try it for yourself - make a move with the black king on the board below, without moving him into check:</p>
+         <br>
+         <div class="chessboard k6"></div>
+         <br>
+         <p>This also applies when the king is capturing a piece. If capturing an enemy piece would put him into check, 
+             then that piece is off limits. Try making a capture with the white king on the board below, without moving him into check:</p>
+         <br>
+         <div class="chessboard k7"></div>
+         <br>
+         <p>Note that because the king can never move into check, this means that the two kings may never stand next to each other 
+             - then both of them would be in check. The position on the board below is illegal:</p>
+         <br>
+         <div class="chessboard k8"></div>
+         <br><br><hr><br>
+         <h1>You have completed all piece introductions!</h1>
+         <br><hr><br>
+    </div>
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>
